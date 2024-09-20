@@ -17,7 +17,10 @@ public class PastebinTest {
 
     @Test
     public void testCreateNewPaste() {
-        pastebinPage.createNewPaste("Hello from WebDriver", "10 Minutes", "helloweb");
+        String code = "git config --global user.name  \"New Sheriff in Town\"\n" +
+                "git reset $(git commit-tree HEAD^{tree} -m \"Legacy code\")\n" +
+                "git push origin master --force";
+        pastebinPage.createNewPaste(code, "how to gain dominance among developers","Bash","10 Minutes");
     }
 
     @AfterClass
